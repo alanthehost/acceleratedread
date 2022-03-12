@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html>
+<!--[if IE 7]>
+<html class="lt-ie9 ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="lt-ie9 ie8">
+<![endif]-->
+
+<head><title>
+	Welcome to Renaissance Place
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+	WebFontConfig = {
+		custom: {
+			families: ['Source Sans Pro', 'RLGlyphs'],
+			urls: [
+				'https://z11resources.renlearnrp.com/scripts/webfonts/sourcesanspro/style.css',
+				'https://z11resources.renlearnrp.com/scripts/webfonts/icons/style.css'
+			]
+		}
+	};
+</script>
+<script src="https://z11resources.renlearnrp.com/scripts/webfonts/webfont.js" type="text/javascript"></script>
+
+<link href="https://z11resources.renlearnrp.com/scripts/master-css/master.css" rel="stylesheet" type="text/css" />
+<link href="https://z11resources.renlearnrp.com/scripts/logos/logos.css" rel="stylesheet" type="text/css" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+<!-- fix some IE-related body/html height/display/position conflict issues
+	when resolving full-height background gradient issues in Safari/Firefox: -->
+<!--[if IE]><style type="text/css"> html { height: auto !important; } body { display: inline !important;  } </style><![endif]-->
+<!--[if gte IE 9]><style type="text/css"> body { display: block !important; }</style><![endif]-->
+
+
+	<script type="text/javascript">
+	var Renlearn = Renlearn || {};
+	Renlearn.Fallback = {
+			cssStyleTemplate : "%3Clink href='{0}' type='text/css' rel='Stylesheet'%3E%3C/script%3E",
+			jsScriptTemplate: "%3Cscript src='{0}' type='text/javascript'%3E%3C/script%3E",
+			InjectCssLinkTag : function (uri) { document.write(unescape(Renlearn.Fallback.cssStyleTemplate.replace("{0}",uri))); },
+			InjectJSScriptTag : function (uri) { document.write(unescape(Renlearn.Fallback.jsScriptTemplate.replace("{0}",uri))); }
+	};
+	</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	if(!window.jQuery){
+			Renlearn.Fallback.InjectJSScriptTag("https://z11resources.renlearnrp.com/scripts/jquery/jquery-1.7.1.min.js");
+	}
+</script>
+
+	<link  href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/cupertino/jquery-ui.css" type="text/css" rel="Stylesheet"/>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"				type="text/javascript"></script>
+	<script type="text/javascript">
+		if (window.jQuery && !window.jQuery.ui) {
+			Renlearn.Fallback.InjectCssLinkTag("https://z11resources.renlearnrp.com/scripts/jqueryui/1.10.3/themes/cupertino/jquery-ui.min.css");
+			Renlearn.Fallback.InjectJSScriptTag("https://z11resources.renlearnrp.com/scripts/jqueryui/1.10.3/jquery-ui.min.js");
+		}
+	</script>
+
+
+<script src="https://z11resources.renlearnrp.com/scripts/help/launchrphelp.js" type="text/javascript"></script>
+<script src="res/rliCommon.js?20140725" type="text/javascript"></script>
+
+
+<script src="res/Controls.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$.datepicker.setDefaults({
+			changeMonth: true, changeYear: true, showOn: 'button', buttonImageOnly: false, showAnim: 'slideDown'
+		});
+	});
+</script>
+
+	<style type="text/css">
+		#form1 { margin: 0; }
+	</style>
+	
+	<style type="text/css">
+
+		body {
+			background: #326295;
+		}
+
+		.app-footer {
+			text-align: left;
+		}
+
+		.app-footer .style-text-xxxsmall {
+			font-size: 0.6em !important;
+			margin-top: 1em;
+		}
+
+		.bg-wrapper {
+			color: #fff;
+			background: url('images/rp_entry_background_uk.jpg');
+			background-size: cover;
+			background-position: 50% 0;
+			height: 545px;
+			margin: -1em 0 -1em 0;
+			padding: 155px 0 110px 0;
+			position: relative;
+		}
+
+			.bg-wrapper label, .bg-wrapper a, .bg-wrapper a:hover {
+				color: #fff;
+			}
+
+			.ie8-bg-cover-cheat {
+				display: none;
+				top: 0;
+				left: 0;
+				min-width: 100%;
+				position: absolute;
+				overflow: hidden;
+				z-index: 1;
+			}
+
+				.ie8 .ie8-bg-cover-cheat {
+					display: block;
+				}
+
+				.ie8-bg-cover-cheat img {
+					width: 100%;
+					height: auto;
+				}
+
+			.wrapper-inner {
+				position: relative;
+				z-index: 10;
+			}
+
+		#divBtns {
+			text-align: center;
+			margin-bottom: 65px;
+		}
+
+			#divBtns a {
+				display: table;
+				margin: 0 auto 1.444444444444444em auto;
+			}
+
+			#divBtns a:hover {
+				text-decoration: none;
+			}
+
+		.center {
+			margin: 0 auto;
+		}
+
+		.button {
+			font-size: 1em;
+			font-weight: 400;
+			border-style: none;
+			display: table;
+			height: 2.44em;
+			line-height: 2.22em;
+			padding: 0 10px 0 10px;
+			text-align: left;
+			width: 19.44444444444444em;
+		}
+
+			.button > span {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.button .px32 {
+				width: 32px;
+			}
+
+			.button .text {
+				font-weight: 700;
+				margin-bottom: 10px;
+				padding-left: 1em;
+				text-align: left;
+			}
+
+			.button .glyph.glyph-chevron-next {
+				float: right;
+				font-size: 1.333333333333333em;
+				line-height: 1.5em;
+			}
+
+		#divRefreshDB {
+			font-size: 14px;
+			margin: 68px auto 0 auto;
+			text-align: center;
+		}
+
+		#divUpdateState {
+			font-size: 14px;
+			margin: 0 auto 70px auto;
+			text-align: center;
+		}
+
+		#divDetectPlugin 
+		{
+			margin: 0 auto;
+		}
+
+		#divRefreshDB, #divUpdateState, #divDetectPlugin {
+			width: 25%;
+		}
+
+		.rpid {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 2.333333333333333em;
+			z-index: -1;
+		}
+
+		.imgRPID {
+			background: #fff;
+			float: right;
+			height: 31px; 
+			width: 129px
+		}
+
+		.divRPID {
+			text-align: right;
+			clear: both; 
+			white-space: nowrap;
+			padding-right: 8px; /* align with RPID img */
+		}
+
+		#dRPIDfloat {
+			display: none;
+			top: 10%;
+		}
+
+		.floatImage {
+			display:inline; 
+			padding-left:2px; 
+			width:77px; 
+			height:25px; 
+			vertical-align:middle
+		}
+
+		.style-text-xxxsmall {
+			font-size: 0.6em;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.dialog-close').click(function (e) {
+				e.preventDefault();
+				$('#dRPIDfloat').hide();
+			});
+
+			setupCoverImageCheat($('.bg-wrapper'), $('.ie8 .ie8-bg-cover-cheat'), 1100, 574);
+		});
+	</script>
+</head>
+<body>
+	<form name="form1" method="post" action="./" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="W7jqKqfVzMocPP56FWsdrkqPHUz26uyr4oDZyriMMWJjPrF3FgcH3mnRY98SQEt+bkAaFxOr3/J2hcf7TkW8qUFo/xf5tnHL3aJw65TmlBI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/2171850/WebResource.axd?d=hH3ZGPAfbXN2esO-LXOBj13IEAspKit2saLxjqGzeRn7rTc9RDahlfM-i9N1K9n7SvEAPq5olRHQMAGZzZVyR3UglXJNO6yGw3gywmjduRU1&amp;t=637729626440000000" type="text/javascript"></script>
+
+
+<script src="https://chatfile.renlearn.com/whoson_realtimeUK.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6F4188A0" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Qo3J93KlfiVgD8vj4Dt4X0IMR0+KyD24hJxrS33kBKNgupq8CF70l2kC8l3hpqe6mOfczUQNsspfJe2BPsz5whDpnWg+h2Xd/IT1m7jGnCulEhzQQ1rWXYigUZ6ytaybgqS9Wi8yK529wffXhyUiCA==" />
+</div>
+		
+<style type="text/css">
+	
+	#divCorpLogo a  {
+		position: relative;
+		display: inline-block;
+		z-index: 1;
+	}
+
+	#divCorpLogo a span.cheat {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+	}
+	
+	/**
+	 * TODO: Move to separate stylesheet
+	 */
+	#spSYNotice {
+		background: #ECD400;
+		font-size: 0.7em;
+		margin-left: 1em;
+		padding: 0.5em 0.5em 0.2em 0.5em;
+		vertical-align: top;
+		position: absolute;
+		white-space: nowrap;
+	}
+
+    .ad-bar {
+	padding: 0 22px; 
+    }
+    .title-bar { padding: 19px; }
+    .title-bar .title-bar-text { font-size: 24px; }
+       
+	.rl-logo img {
+		max-width: none;
+	}
+
+	/** PLACEPICKER */
+
+	#placePicker, .dialog-underlay {
+		display: none;
+	}
+
+	#placePicker {
+		-webkit-overflow-scrolling: touch;
+	}
+
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 3px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #f2f2f2;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: #616060;
+	}
+
+	/* master CSS header override until it is merged */
+	.dialog-underlay{display:none} .app-header .user-bar .user-nav{font-size:0.6111111111111111em}.app-header .user-bar-outer{max-height:34px}.app-header .user-bar{z-index:100}.app-header .user-bar .user-nav .logo,.app-header .user-bar .user-nav .rl-logo{max-height:34px}.app-header .user-bar .user-nav>ul>li{cursor:pointer;display:inline-block;*display:inline}.app-header .user-bar .user-nav>ul>li>a{color:#e6e6e6;text-decoration:none}.app-header .user-bar .user-nav>ul>li.text-only:hover{color:#e6e6e6;cursor:default}.app-header .user-bar .user-nav>ul{border-top:none;float:right}.app-header .user-bar .user-nav>ul li{padding:0 10px;line-height:35px;zoom:1}.app-header .user-bar .user-nav>ul li:after{display:none}.app-header .user-bar .user-nav>ul li:hover,.app-header .user-bar .user-nav>ul li:hover a{color:#aaa}.app-header .user-bar .user-nav>ul li.separator{border-right:1px solid #777;height:14px;vertical-align:middle;display:inline!important;padding:0!important;margin-right:2px}.app-header .user-bar .user-nav>ul li.dropdown.show{color:#555;background:#fff}.app-header .user-bar .user-nav>ul li.dropdown.show a{color:#555}.app-header .user-bar .user-nav>ul li.dropdown .dropdown-indicator-arrow{font-size:.6em;line-height:1em;margin-left:.3em}.app-header .user-bar .user-nav>ul li.dropdown>div{font-size:1.272727272727273em;border-top:none;margin-top:0;color:#555;width:150px;min-width:150px;margin-left:-1px}.app-header .user-bar .user-nav>ul li.dropdown>div.full{width:101%}.app-header .user-bar .user-nav>ul li.dropdown>div ul{float:left}.app-header .user-bar .user-nav>ul li.dropdown>div li:after{border-right:none}.app-header .user-bar .user-nav>ul li.dropdown>div li a{padding:10px 5px;margin-left:-20px}.app-header .user-bar .user-nav>ul li:last-child:after{content:'';border-right:none}.app-header .user-bar .user-nav>ul li.icon{text-align:center}.app-header .user-bar .user-nav>ul li.icon span{ font-size: 18px;}.app-header ul li.dropdown>div li{display:block !important}
+
+	.rl-logo object {
+		height: 24px;
+		width: 177px;
+		margin-top: 3px;
+	}
+
+	#aHelpLink{
+		padding-left:10px
+		!important;
+		padding-right:10px
+		!important;
+		display:block;
+	}
+
+	.liHelpIcon{
+		padding:0px !important;
+	}
+
+	.navitembadge
+	{
+		font-size:8px;
+		width:1em;
+		height:1em;
+		vertical-align:text-top;
+	}
+	
+	.navitembadge-background
+	{
+		fill:#ee2126;
+	}
+
+	#customerCenterExternalGlyph 
+	{
+		float:right;
+		padding-top:10px;
+	}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#mHelpButton').click(function (e) {
+			e.preventDefault();
+			LaunchRPHelp($(this).data('app-id'), $(this).data('culture'), $(this).data('help-id'), $(this).data('redirect-url'));
+		});
+	});
+</script>
+<input name="ctl00$mHeader$mpreviousID" type="hidden" id="ctl00_mHeader_mpreviousID" />
+<div class="app-header">
+	<div class="user-bar-outer">
+		<div class="user-bar row collapse">
+			<div id="divCorpLogo" class="rl-logo small-3 columns"><a href="http://www.renlearn.co.uk" target="_blank"><object data="images/branding/renaissance-learning-horizontal-white.png" type="image/svg+xml"><img src="/images/branding/renaissance-learning-horizontal-white.png" id="ctl00_mHeader_mRenlearnLogo" alt="Renaissance Place" /></object><span class="cheat"></span></a>
+				
+			</div>
+			
+		</div>
+	</div>
+	
+	
+    
+</div>
+
+
+
+<script type="text/javascript">
+	$(function () {
+		function close_all_menus() {
+			$('.dropdown.show').removeClass('show');
+		}
+
+		$(document).bind('touchend click', function(e) {
+			close_all_menus();
+		});
+
+		$('.dropdown').bind('touchend click', function(e) {
+			e.stopPropagation();
+			$('.dropdown').not($(this)).removeClass('show');
+			$(this).addClass('show');
+		});
+
+		$('.dropdown > div a').click(function(e) {
+			close_all_menus();
+			e.stopPropagation();
+		});
+
+		/**
+		* PLACEPICKER
+		*/
+		$('#liChangeRole a').bind('touchend click', function (e) {
+			e.preventDefault();
+
+			$('#placePickerUnderlay').show();
+			$('#placePicker').show();
+
+			var options = $('#placePicker .options');
+			var show_size = $(options).data('size');
+			if (show_size > 0) {
+				// resize options height
+				var option_size = $(options).find('.option').outerHeight();
+				$(options).height(option_size * show_size);
+				$(options).width($(options).parent().outerWidth() - 2);
+				// pre-scroll to selected
+				var selected_offset = $(options).find('.selected').index() - 1;
+				$(options).scrollTop(selected_offset * option_size);
+			}
+		});
+
+		setHighlightedNavigation();
+	});
+
+	function setHighlightedNavigation() {
+		var path = window.location.pathname + window.location.hash;
+		path = path.replace(/\/$/, '');
+		path = decodeURIComponent(path);
+		
+		$('.navMenu a').removeClass('active');
+
+		$('.navMenu a').each(function () {
+			var href = $(this).attr('href');
+
+			if (path.substring(0, href.length).toLowerCase() === href.toLowerCase()) {
+				$(this).addClass('active');
+			}
+		});
+	}
+
+	function setHelpLink(appId, helpId) {
+		var $helpLink = $("#mHelpButton");
+		var hrefValue = $helpLink.attr("data-uri");
+		$helpLink.data('help-id', helpId);
+		$helpLink.attr('href', hrefValue.replace('%s', appId).replace('%s', helpId));
+	}
+	
+	var chatItem = $('#liLiveChatRL');
+	if ($(chatItem).length != 0) {
+		if (typeof window.IsLiveChatAvailable != 'function')
+			$(chatItem).hide();
+		else if (!IsLiveChatAvailable()) {
+			$(chatItem).click = function() {};
+			$(chatItem).find('.glyph').removeClass('glyph-support-on').addClass('glyph-support-off');
+		}
+	}
+
+	var customerCenter = $('.customercenter');
+	if ($(customerCenter).length != 0) {
+		function setNavItemBadge(unreadMessages) {
+			if (unreadMessages) {
+				$('.navitembadge').css('display', 'initial');
+			} else {
+				$('.navitembadge').css('display', 'none');
+			}
+		};
+
+		var messageCenterRequestUrl = '';
+		if (sessionStorage.messageCenter
+			&& (Date.now() - sessionStorage.messageCenter.split(',')[0]) <= 30000
+			&& sessionStorage.messageCenter.split(',')[2] === messageCenterRequestUrl) {
+				setNavItemBadge(sessionStorage.messageCenter.split(',')[1] === 'true');
+		} else {
+			jQuery.getJSON(messageCenterRequestUrl,
+			null,
+			function (data) {
+				setNavItemBadge(data.UnreadMessages);
+				sessionStorage.messageCenter = Date.now() + ',' + data.UnreadMessages + ',' + messageCenterRequestUrl;
+			});
+		}
+	}
+</script>
+
+		
+	
+	<div class="bg-wrapper">
+		<div class="ie8-bg-cover-cheat"><img src="images/rp_entry_background_uk.jpg" alt="" /></div>
+
+		<div class="wrapper-inner">
+			<div id="divBtns">
+				<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+					<div id="btnStudent" class="button hollow white center">
+						<span class="px32 glyph glyph-reading"></span>
+						<span class="text">I am a Student</span>
+						<span class="glyph glyph-chevron-next"></span>
+					</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=d1YBv2mWll0">
+					<div id="btnTeacher" class="button hollow white center">
+						<span class="px32 glyph glyph-class"></span>
+						<span class="text">I am a Teacher/Administrator</span>
+						<span class="glyph glyph-chevron-next"></span>
+					</div>
+				</a>
+				<a href="Public/RPM/Login/Login.aspx?srcID=p">
+					
+				</a>
+			</div>
+
+			
+			<div id="divDetectPlugin" class="style-text-xsmall text-center">
+				<a class="link center" href="Public/RPM/DetectPlugin/" target="_blank">Check Software Requirements <span class="glyph glyph-newtab"></span></a>
+			</div>
+			
+
+			<div id="ctl00_cp_Content_RPIDSection" class="rpid row">
+				<div id="RPIDimage">
+					<a href="#">
+						<img id="imgRPID" class="imgRPID" src="images/rpid_lrg.gif" alt="Renaissance Place ID" onclick="$('#dRPIDfloat').show(); return false;" />
+					</a>
+				</div>
+				<div id="ctl00_cp_Content_divRPID" class="divRPID">LSAHTC-28GH</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="dRPIDfloat" class="dialog">
+		<div class="title-bar">
+			<h4>Renaissance Place ID</h4>
+			<div class="controls">
+			  <a href="#" class="dialog-close"><span class="glyph glyph-close"></span></a>
+			</div>
+		</div>
+
+		<h3>
+			<img src="images/rpid_sm.gif" alt="" class="floatImage" /> 
+			Renaissance Place ID
+		</h3>
+		<p><strong>What is it?</strong> Renaissance Place ID is a unique identifier that provides a shortcut to your Renaissance Place site.</p>
+		<p><strong>Where can I use it?</strong> Renaissance Place ID can be used during setup of Accelerated Reader on iPad&reg;, iPhone&reg;, or iPod touch&reg; and during setup of STAR Reading, STAR Maths and STAR Early Literacy on iPad&reg;.</p>
+		<p><strong>What if I don’t use Accelerated Reader or STAR assessments?</strong> Renaissance Place ID automatically appears on the Renaissance Place Welcome page and can be used wherever you see the RPID image going forward.</p>
+
+		<div class="actions">
+			<button id="ctl00_cp_Content_btnClose" class="dialog-close">Close</button>
+		</div>
+	</div>
+
+		
+
+<div class="app-footer nonPrintable">
+	<div class="row">
+		<p id="ctl00_mFooter_dCopyright">&copy; 2022 Renaissance Learning, Inc. All rights reserved.</p>
+		
+		<p id="ctl00_mFooter_dExtendedCopyright" class="style-text-xxxsmall">All logos, designs, and brand names for Renaissance Learning’s products and services, including but not limited to Accelerated Maths, Accelerated Reader, AR, ATOS, Renaissance Home Connect, Renaissance Learning, Renaissance Place, Renaissance School Partnership, Renaissance-U,STAR, STAR Early Literacy, STAR Maths and STAR Reading are trademarks of Renaissance Learning, Inc., and its subsidiaries, registered, common law, or pending registration in the United Kingdom, United States and other countries. All other product and company names should be considered as the property of their respective companies and organisations. This product uses the Khan Academy API but is not endorsed or certified by Khan Academy. NOTE: All Khan Academy content is available for free at <a href="javascript:void(window.open('http://www.khanacademy.org','','hotkeys=no, dependent=no,  menubar=false, resizable=yes, location=false, directories=no, titlebar=no, toolbar=false, scrollbars=yes'))">www.khanacademy.org</a>.<br /></p>
+	</div>
+</div>
+	
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+	
+</body>
+</html>
